@@ -1,6 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
+<style>
+    /* Эффект матового стекла для панели */
+    .glass-header {
+        background: rgba(9, 9, 11, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .back-link {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .back-link:hover {
+        color: #f97316; /* Оранжевый при наведении */
+        transform: translateX(-5px);
+    }
+</style>
+
+<!-- 2. Сама панель (вставьте это сразу после открытия тега <body>) -->
+<header class="glass-header fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        
+        <!-- Кнопка возврата -->
+        <a href="../index.html" class="back-link flex items-center text-zinc-400 font-medium text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Назад
+        </a>
+
+        <!-- Логотип бренда -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center">
+            <span class="text-white font-bold tracking-widest text-lg uppercase">ROTI</span>
+            <span class="text-orange-500 font-bold tracking-widest text-lg uppercase">SERY</span>
+        </div>
+
+        <!-- Индикатор (дизайн 2026) -->
+        <div class="hidden sm:flex items-center space-x-2">
+            <div class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+            <span class="text-[10px] text-zinc-500 uppercase tracking-tighter">Project Status: Active</span>
+        </div>
+    </div>
+</header>
+
+<!-- 3. Важно: добавьте отступ сверху вашему основному контенту, чтобы панель его не закрывала -->
+<div class="pt-20"></div>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rotisery Menu Strategy</title>
@@ -22,8 +72,6 @@
     </style>
 </head>
 <body class="p-6 md:p-12">
-
-<a href="../index.html" class="nav-back">← Назад</a>
 
 
     <div class="max-w-6xl mx-auto">
