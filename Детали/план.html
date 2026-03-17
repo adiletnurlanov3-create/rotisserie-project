@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotisery Roadmap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #050505; color: white; }
+        .unbounded { font-family: 'Unbounded', sans-serif; }
+        .card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 1.5rem; transition: all 0.3s ease; }
+        .card:hover { border-color: #f97316; background: rgba(249, 115, 22, 0.03); }
+        .phase-number { background: linear-gradient(135deg, #f97316, #ea580c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+        .status-waiting { background-color: #3f3f46; }
+        .status-active { background-color: #f97316; box-shadow: 0 0 10px #f97316; }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+<a href="../Концепция и бизнес-модель ROTISERY.html" class="nav-back">← Назад</a>
+
+    <div class="max-w-5xl mx-auto">
+        <header class="mb-16">
+            <h1 class="unbounded text-3xl md:text-4xl font-bold mb-4 italic uppercase">План реализации <span class="phase-number">Rotisery</span></h1>
+            <p class="text-zinc-500 uppercase tracking-widest text-[10px]">График запуска проекта: Бишкек • 90 дней</p>
+        </header>
+
+        <div class="space-y-12">
+            
+            <!-- МЕСЯЦ 1 -->
+            <div class="relative pl-8 border-l-2 border-zinc-800">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-orange-600 border-4 border-black"></div>
+                <div class="mb-8">
+                    <span class="unbounded phase-number text-xl font-bold italic mr-4">ЭТАП 01</span>
+                    <span class="text-zinc-400 uppercase tracking-widest text-xs">Месяц 1: Юридический & Локация</span>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="card p-6">
+                        <h4 class="text-xs font-bold uppercase text-zinc-500 mb-4">Администрирование</h4>
+                        <ul class="space-y-3 text-sm italic text-zinc-300">
+                            <li class="flex items-center"><span class="status-dot status-active"></span>Регистрация ОсОО / ИП</li>
+                            <li class="flex items-center"><span class="status-dot status-active"></span>Получение Halal сертификата</li>
+                            <li class="flex items-center"><span class="status-dot status-waiting"></span>Договоры с поставщиками мяса</li>
+                        </ul>
+                    </div>
+                    <div class="card p-6">
+                        <h4 class="text-xs font-bold uppercase text-zinc-500 mb-4">Объект</h4>
+                        <ul class="space-y-3 text-sm italic text-zinc-300">
+                            <li class="flex items-center"><span class="status-dot status-active"></span>Поиск локации (БЦ / Центр)</li>
+                            <li class="flex items-center"><span class="status-dot status-active"></span>Замеры и тех-план кухни</li>
+                            <li class="flex items-center"><span class="status-dot status-waiting"></span>Дизайн-проект "Оазиса"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- МЕСЯЦ 2 -->
+            <div class="relative pl-8 border-l-2 border-zinc-800">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-zinc-800 border-4 border-black"></div>
+                <div class="mb-8">
+                    <span class="unbounded text-zinc-600 text-xl font-bold italic mr-4">ЭТАП 02</span>
+                    <span class="text-zinc-400 uppercase tracking-widest text-xs">Месяц 2: Стройка & Оборудование</span>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="card p-6">
+                        <h4 class="text-xs font-bold uppercase text-zinc-500 mb-4">Оборудование</h4>
+                        <ul class="space-y-3 text-sm italic text-zinc-400">
+                            <li>• Заказ Ротиссери-гриля</li>
+                            <li>• Установка вытяжной системы</li>
+                            <li>• Холодильное оборудование</li>
+                        </ul>
+                    </div>
+                    <div class="card p-6 border-cyan-500/20">
+                        <h4 class="text-xs font-bold uppercase text-cyan-500 mb-4">Зона Оазиса</h4>
+                        <ul class="space-y-3 text-sm italic text-zinc-400">
+                            <li>• Монтаж стены-водопада</li>
+                            <li>• Установка аквариумов</li>
+                            <li>• Фито-дизайн (живые растения)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- МЕСЯЦ 3 -->
+            <div class="relative pl-8 border-l-2 border-zinc-800">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-zinc-800 border-4 border-black"></div>
+                <div class="mb-8">
+                    <span class="unbounded text-zinc-600 text-xl font-bold italic mr-4">ЭТАП 03</span>
+                    <span class="text-zinc-400 uppercase tracking-widest text-xs">Месяц 3: Команда & Запуск</span>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="card p-5">
+                        <h4 class="text-[10px] font-bold uppercase text-zinc-500 mb-3 italic">Команда</h4>
+                        <p class="text-[11px] text-zinc-500 leading-relaxed italic">Найм гриль-мастеров и кассиров. Обучение стандартам Halal.</p>
+                    </div>
+                    <div class="card p-5 border-orange-500/10">
+                        <h4 class="text-[10px] font-bold uppercase text-orange-500 mb-3 italic">Маркетинг</h4>
+                        <p class="text-[11px] text-zinc-500 leading-relaxed italic">Тизеры в TikTok. Приглашение блогеров Бишкека.</p>
+                    </div>
+                    <div class="card p-5 border-green-500/10">
+                        <h4 class="text-[10px] font-bold uppercase text-green-500 mb-3 italic">Старт</h4>
+                        <p class="text-[11px] text-zinc-500 leading-relaxed italic">Технический запуск. Grand Opening в центре города.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- HR СТРУКТУРА (БОНУС) -->
+        <div class="mt-20 card p-10 border-white/10">
+            <h2 class="unbounded text-xl mb-8 italic uppercase text-center tracking-tighter">Орг-структура Команды</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-2xl mb-2">🧑‍🍳</div>
+                    <p class="text-xs font-bold uppercase italic">Шеф-грильмен</p>
+                    <p class="text-[9px] text-zinc-600">Качество & Маринад</p>
+                </div>
+                <div>
+                    <div class="text-2xl mb-2">🤝</div>
+                    <p class="text-xs font-bold uppercase italic">Администратор</p>
+                    <p class="text-[9px] text-zinc-600">Сервис & Закупки</p>
+                </div>
+                <div>
+                    <div class="text-2xl mb-2">🧤</div>
+                    <p class="text-xs font-bold uppercase italic">2 Кассира</p>
+                    <p class="text-[9px] text-zinc-600">Продажи & Упаковка</p>
+                </div>
+                <div>
+                    <div class="text-2xl mb-2">🐠</div>
+                    <p class="text-xs font-bold uppercase italic">Техник (A/S)</p>
+                    <p class="text-[9px] text-zinc-600">Обслуживание Оазиса</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-16 text-center">
+            <button onclick="window.print()" class="px-8 py-3 bg-white text-black font-bold uppercase text-[10px] rounded-full hover:bg-orange-500 hover:text-white transition-all">
+                Скачать план в PDF
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

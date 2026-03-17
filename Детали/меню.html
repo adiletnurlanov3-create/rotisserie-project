@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotisery Menu Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #050505; color: white; }
+        .unbounded { font-family: 'Unbounded', sans-serif; }
+        .menu-card { 
+            background: linear-gradient(145deg, #111, #080808); 
+            border: 1px solid rgba(255,255,255,0.05); 
+            border-radius: 1.5rem; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .menu-card:hover { transform: translateY(-5px); border-color: #f97316; }
+        .price-tag { color: #f97316; font-family: 'Unbounded', sans-serif; font-weight: 700; }
+        .badge { font-size: 8px; padding: 2px 8px; border-radius: 99px; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+<a href="../Концепция и бизнес-модель ROTISERY.html" class="nav-back">← Назад</a>
+
+
+    <div class="max-w-6xl mx-auto">
+        <header class="mb-16 text-center">
+            <h1 class="unbounded text-3xl md:text-5xl font-bold mb-4 italic uppercase">Menu <span class="text-orange-500">Architecture</span></h1>
+            <p class="text-zinc-500 uppercase tracking-[0.3em] text-[10px]">Стратегия продукта • Высокая маржинальность • Бишкек</p>
+        </header>
+
+        <!-- ОСНОВНОЕ МЕНЮ -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            
+            <!-- Курица Ротиссери -->
+            <div class="menu-card p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="badge bg-orange-600/20 text-orange-500">Main Star</span>
+                    <span class="price-tag">850 с.</span>
+                </div>
+                <h3 class="unbounded text-lg mb-2 italic">Целая Курица</h3>
+                <p class="text-xs text-zinc-500 italic mb-6 leading-relaxed">Золотистая корочка, 12-часовой маринад. Идеально для компании или семьи.</p>
+                <div class="text-[10px] text-zinc-600 border-t border-white/5 pt-4">
+                    МАРЖА: <span class="text-green-500 font-bold">~65%</span>
+                </div>
+            </div>
+
+            <!-- Pulled Chicken -->
+            <div class="menu-card p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="badge bg-green-600/20 text-green-500 italic">Zero Waste</span>
+                    <span class="price-tag">280 с.</span>
+                </div>
+                <h3 class="unbounded text-lg mb-2 italic">Pulled Sandwich</h3>
+                <p class="text-xs text-zinc-500 italic mb-6 leading-relaxed">Рваное нежное мясо, соус BBQ, булочка бриошь. Наш ответ скучным бургерам.</p>
+                <div class="text-[10px] text-zinc-600 border-t border-white/5 pt-4">
+                    МАРЖА: <span class="text-green-500 font-bold">~75%</span>
+                </div>
+            </div>
+
+            <!-- Золотой картофель -->
+            <div class="menu-card p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="badge bg-yellow-600/20 text-yellow-500">Legendary Side</span>
+                    <span class="price-tag">150 с.</span>
+                </div>
+                <h3 class="unbounded text-lg mb-2 italic">Golden Potato</h3>
+                <p class="text-xs text-zinc-500 italic mb-6 leading-relaxed">Картофель, запеченный прямо под курицей, впитывающий все соки и аромат.</p>
+                <div class="text-[10px] text-zinc-600 border-t border-white/5 pt-4">
+                    МАРЖА: <span class="text-green-500 font-bold">~85%</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ПОЧЕМУ ЭТО ВЫГОДНО ИНВЕСТОРУ -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center bg-white/5 p-10 rounded-[2rem] border border-white/5">
+            <div>
+                <h2 class="unbounded text-2xl mb-6 italic uppercase">Экономика <span class="text-orange-500">фуд-коста</span></h2>
+                <div class="space-y-6 text-sm text-zinc-400 italic leading-relaxed">
+                    <p>Мы закупаем только один вид основного сырья — свежую курицу. Это упрощает логистику и хранение.</p>
+                    <p>Благодаря системе <span class="text-white font-bold">Zero Waste</span>, мясо, которое не было продано целиком в пиковые часы, превращается в высокомаржинальные сэндвичи и салаты. Мы буквально продаем 100% закупленного мяса.</p>
+                    <div class="pt-4 flex gap-8">
+                        <div>
+                            <div class="text-2xl font-bold text-white unbounded">35%</div>
+                            <div class="text-[10px] uppercase tracking-widest">Средний фудкост</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-white unbounded">1.5мес</div>
+                            <div class="text-[10px] uppercase tracking-widest">Оборачиваемость</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-black/40 p-6 rounded-2xl border border-white/5">
+                    <span class="text-2xl mb-4 block">⚖️</span>
+                    <h4 class="text-xs font-bold uppercase mb-2">Стабильность</h4>
+                    <p class="text-[10px] text-zinc-500 italic">Цены на курицу в КР стабильнее, чем на говядину.</p>
+                </div>
+                <div class="bg-black/40 p-6 rounded-2xl border border-white/5">
+                    <span class="text-2xl mb-4 block">📈</span>
+                    <h4 class="text-xs font-bold uppercase mb-2">Масштаб</h4>
+                    <p class="text-[10px] text-zinc-500 italic">Легко открыть 2-ю и 3-ю точку по франшизе.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-20 text-center opacity-30">
+            <p class="unbounded text-[8px] tracking-[0.5em] uppercase italic">Rotisery Concept • Confidential • 2026</p>
+        </footer>
+    </div>
+
+</body>
+</html>

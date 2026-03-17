@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROTISERY | Detailed Asset Allocation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-orange: #ff4d00;
+            --brand-cyan: #00d4ff;
+            --dark-bg: #050505;
+            --card-bg: #0f0f0f;
+            --border-color: #222;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        .unbounded { font-family: 'Unbounded', sans-serif; }
+        
+        .section-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 32px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .section-card:hover {
+            border-color: #333;
+        }
+
+        .tag {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 100px;
+            background: rgba(255, 77, 0, 0.1);
+            color: var(--brand-orange);
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .price-tag {
+            font-family: 'Unbounded', sans-serif;
+            background: linear-gradient(90deg, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .highlight-cyan { color: var(--brand-cyan); }
+    </style>
+</head>
+<body class="p-4 md:p-16">
+
+<a href="../Концепция и бизнес-модель ROTISERY.html" class="nav-back">← Назад </a>
+
+
+    <!-- Header Section -->
+    <header class="max-w-6xl mx-auto mb-24">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+            <div class="max-w-2xl">
+                <div class="tag">Capital Strategy 2026</div>
+                <h1 class="unbounded text-5xl md:text-8xl font-black uppercase italic leading-[0.9] mb-8">
+                    INVESTMENT <br> <span class="highlight-cyan italic">SPECIFICATION</span>
+                </h1>
+                <p class="text-zinc-500 text-lg">Детальный перечень активов и распределение бюджета в $25,000 для реализации концепта «Оазис в мегаполисе».</p>
+            </div>
+            <div class="text-right">
+                <div class="text-[10px] uppercase tracking-widest text-zinc-600 mb-2">Общий бюджет</div>
+                <div class="unbounded text-5xl font-black italic">$25K</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto">
+        
+        <!-- Category 01: The Oasis Systems -->
+        <section class="section-card">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5">
+                    <div class="unbounded text-3xl mb-6 italic font-bold">01. <br> АТМОСФЕРА И АРХИТЕКТУРА</div>
+                    <div class="text-5xl price-tag font-black mb-6">$9,500</div>
+                    <p class="text-zinc-400 text-sm italic">Инвестиции в «визуальный вирус» и комфорт гостя. Создание уникального торгового предложения (USP) через физическое пространство.</p>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="border-b border-zinc-800 pb-4">
+                        <h4 class="font-bold text-white uppercase text-sm mb-2 flex justify-between">
+                            <span>Аквариумные экосистемы</span>
+                            <span class="text-zinc-500">$4,500</span>
+                        </h4>
+                        <p class="text-xs text-zinc-500 italic leading-relaxed">Профессиональные морские/пресноводные системы, системы жизнеобеспечения, освещение спектрального типа.</p>
+                    </div>
+                    <div class="border-b border-zinc-800 pb-4">
+                        <h4 class="font-bold text-white uppercase text-sm mb-2 flex justify-between">
+                            <span>Вертикальное озеленение</span>
+                            <span class="text-zinc-500">$2,500</span>
+                        </h4>
+                        <p class="text-xs text-zinc-500 italic leading-relaxed">Системы автополива, фито-стены, подбор экзотической флоры для влажного климата оазиса.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white uppercase text-sm mb-2 flex justify-between">
+                            <span>Дизайнерская мебель и свет</span>
+                            <span class="text-zinc-500">$2,500</span>
+                        </h4>
+                        <p class="text-xs text-zinc-500 italic leading-relaxed">Концептуальное освещение (RGB/Warm), эргономичная мебель, кастомные элементы декора.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 02: Kitchen Tech -->
+        <section class="section-card">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5">
+                    <div class="unbounded text-3xl mb-6 italic font-bold">02. <br> ТЕХНОЛОГИЧЕСКИЙ ЯРУС</div>
+                    <div class="text-5xl price-tag font-black mb-6">$8,000</div>
+                    <p class="text-zinc-400 text-sm italic">Профессиональное оборудование для высокопроизводительной кухни. Фокус на качество обжарки и скорость подачи.</p>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="border-b border-zinc-800 pb-4">
+                        <h4 class="font-bold text-white uppercase text-sm mb-2 flex justify-between">
+                            <span>Ротиссери-грили (Франция/Турция)</span>
+                            <span class="text-zinc-500">$3,500</span>
+                        </h4>
+                        <p class="text-xs text-zinc-500 italic leading-relaxed">Специализированные печи для медленной обжарки птицы и мяса с визуальным эффектом для гостя.</p>
+                    </div>
+                    <div class="border-b border-zinc-800 pb-4">
+                        <h4 class="font-bold text-white uppercase text-sm mb-2 flex justify-between">
+                            <span>Холодильное и заготовочное обор.</span>
+                            <span class="text-zinc-500">$2,500</span>
+                        </h4>
+                        <p class="text-xs text-zinc-500 italic leading-relaxed">Камеры хранения, столы с охлаждением, оборудование для мариновки.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white uppercase text-sm mb-2 flex justify-between">
+                            <span>Вытяжка и Инжиниринг</span>
+                            <span class="text-zinc-500">$2,000</span>
+                        </h4>
+                        <p class="text-xs text-zinc-500 italic leading-relaxed">Мощная система фильтрации воздуха и отвода запахов (важно для ТЦ/БЦ).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 03: Operational Launch -->
+        <section class="section-card">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5">
+                    <div class="unbounded text-3xl mb-6 italic font-bold">03. <br> ОПЕРАЦИОННЫЙ СТАРТ</div>
+                    <div class="text-5xl price-tag font-black mb-6">$7,500</div>
+                    <p class="text-zinc-400 text-sm italic">Мягкое приземление проекта: аренда, маркетинг и подушка безопасности на этапе разгона.</p>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="border-b border-zinc-800 pb-4">
+                        <h4 class="font-bold text-white uppercase text-sm mb-2 flex justify-between">
+                            <span>Аренда и Legal</span>
+                            <span class="text-zinc-500">$3,000</span>
+                        </h4>
+                        <p class="text-xs text-zinc-500 italic leading-relaxed">Депозит за локацию (1+1 месяц), регистрация бренда, разрешительная документация.</p>
+                    </div>
+                    <div class="border-b border-zinc-800 pb-4">
+                        <h4 class="font-bold text-white uppercase text-sm mb-2 flex justify-between">
+                            <span>Digital & Content</span>
+                            <span class="text-zinc-500">$1,500</span>
+                        </h4>
+                        <p class="text-xs text-zinc-500 italic leading-relaxed">Создание медиа-контента, настройка соцсетей, разработка айдентики упаковки.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white uppercase text-sm mb-2 flex justify-between">
+                            <span>Резервный фонд</span>
+                            <span class="text-zinc-500">$3,000</span>
+                        </h4>
+                        <p class="text-xs text-zinc-500 italic leading-relaxed">Страховочный капитал на покрытие ФОТ и продуктов в первые 60 дней работы.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Liquidity Assessment -->
+        <section class="mb-24 px-8">
+            <div class="bg-orange-600 rounded-3xl p-12 text-black">
+                <h3 class="unbounded text-2xl font-black uppercase mb-6 italic">Ликвидность вложений</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div>
+                        <div class="text-4xl font-black mb-2 italic">80%</div>
+                        <p class="text-sm font-bold leading-tight opacity-80 uppercase italic">Капитала вложено в материальные активы</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-black mb-2 italic">A+</div>
+                        <p class="text-sm font-bold leading-tight opacity-80 uppercase italic">Класс надежности оборудования</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-black mb-2 italic">0%</div>
+                        <p class="text-sm font-bold leading-tight opacity-80 uppercase italic">Заемного капитала на старте</p>
+                    </div>
+                </div>
+                <p class="mt-12 text-xs font-bold border-t border-black/20 pt-8 uppercase italic tracking-widest">
+                    * Все оборудование и системы «Оазиса» являются собственностью инвестора и могут быть демонтированы/перепроданы в случае релокации бизнеса.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-6xl mx-auto pb-20 text-center">
+        <p class="text-zinc-700 text-[10px] uppercase tracking-[1em]">ROTISERY ASSET MANAGEMENT • 2026</p>
+    </footer>
+
+</body>
+</html>

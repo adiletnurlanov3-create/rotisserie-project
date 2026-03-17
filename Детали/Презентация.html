@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotisery - Бизнес-презентация</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;900&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --fire: #ff4d00; 
+            --water: #00d4ff; 
+            --gold: #d4af37;
+            --bg: #050505; 
+        }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--bg); 
+            color: white; 
+            scroll-behavior: smooth;
+        }
+        .unbounded { font-family: 'Unbounded', sans-serif; }
+        
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5rem 1.5rem;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 2.5rem;
+            padding: 3rem;
+        }
+
+        .highlight-orange { color: var(--fire); }
+        .highlight-blue { color: var(--water); }
+        
+        .image-container {
+            border-radius: 2.5rem;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Анимированный фон воды */
+        .water-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg, transparent, rgba(0, 212, 255, 0.03), transparent);
+            background-size: 100% 200%;
+            animation: flow 10s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes flow {
+            from { background-position: 0 0; }
+            to { background-position: 0 -200%; }
+        }
+
+        .step-card {
+            border-left: 2px solid var(--fire);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+<a href="../Концепция и бизнес-модель ROTISERY.html" class="inline-block mt-10 mb-6 text-zinc-500 hover:text-orange-500 transition-colors">← Назад</a>
+
+
+
+    <!-- 1. ТИТУЛЬНЫЙ ЭКРАН (PAGE 1) -->
+    <section class="text-center overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,77,0,0.07)_0%,transparent_70%)]"></div>
+        <div class="relative z-10">
+            <span class="unbounded text-[10px] tracking-[0.6em] text-orange-500 mb-6 block uppercase">Инвестиционный проект • Бишкек 2026</span>
+            <h1 class="unbounded text-6xl md:text-[11vw] font-black leading-none mb-4 italic uppercase">ROTISERY</h1>
+            <p class="text-xl md:text-3xl font-light tracking-[0.3em] text-zinc-500 uppercase italic">Золотой стандарт сочной курицы</p>
+            <div class="mt-24 animate-bounce">
+                <div class="w-px h-16 bg-gradient-to-b from-orange-500 to-transparent mx-auto"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 2. АНАЛИЗ РЫНКА (PAGE 2-3) -->
+    <section>
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="unbounded text-4xl mb-12 italic uppercase">Возможности <span class="highlight-orange">Рынка</span></h2>
+                <div class="space-y-6">
+                    <div class="glass border-red-900/20">
+                        <h4 class="font-bold text-lg mb-2 uppercase">Уличный фастфуд</h4>
+                        <p class="text-zinc-500 text-sm italic">Низкое доверие к гигиене, отсутствие комфорта, нестабильное качество мяса.</p>
+                    </div>
+                    <div class="glass">
+                        <h4 class="font-bold text-lg mb-2 uppercase">Премиум рестораны</h4>
+                        <p class="text-zinc-500 text-sm italic">Высокий чек (1500+ сом), долгое ожидание. Формат не для ежедневного обеда.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="glass border-orange-500/30">
+                <h3 class="unbounded text-2xl mb-6 highlight-orange italic uppercase">Наше решение</h3>
+                <p class="text-lg leading-relaxed italic text-zinc-300">
+                    Формат <span class="font-bold text-white uppercase">Fast-Casual</span>: премиальное качество по доступной цене в уникальном интерьере.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ПРОДУКТ И ТЕХНОЛОГИЯ (PAGE 4) + ВИДЫ КУРИЦЫ -->
+    <section class="bg-orange-950/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <div class="image-container">
+                    <img src="https://static.vecteezy.com/system/resources/previews/066/822/455/large_2x/golden-roasted-chicken-on-a-rotisserie-with-smoky-background-and-steam-photo.jpg" alt="" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="unbounded text-4xl mb-8 italic uppercase text-orange-600">Безупречная курица</h2>
+                    <ul class="space-y-6 italic">
+                        <li class="flex gap-4"><span class="text-orange-500 font-bold">01</span> Технология медленного вращения</li>
+                        <li class="flex gap-4"><span class="text-orange-500 font-bold">02</span> 12-часовой маринад в авторских специях</li>
+                        <li class="flex gap-4"><span class="text-orange-500 font-bold">03</span> Только свежий Халяль от местных фермеров</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass text-center border-zinc-800">
+                    <h4 class="unbounded text-sm mb-4 italic text-zinc-400">CLASSIC GOLD</h4>
+                    <p class="text-[11px] text-zinc-600 uppercase">Оригинальный рецепт</p>
+                </div>
+                <div class="glass text-center border-red-900/40">
+                    <h4 class="unbounded text-sm mb-4 italic text-red-500">SPICY FIRE</h4>
+                    <p class="text-[11px] text-zinc-600 uppercase">Острый чили-маринад</p>
+                </div>
+                <div class="glass text-center border-green-900/40">
+                    <h4 class="unbounded text-sm mb-4 italic text-green-500">GARDEN HERB</h4>
+                    <p class="text-[11px] text-zinc-600 uppercase">Лимон и розмарин</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ИНТЕРЬЕР И ОАЗИС (PAGE 5) -->
+    <section class="overflow-hidden">
+        <div class="water-bg"></div>
+        <div class="max-w-6xl mx-auto">
+            <h2 class="unbounded text-4xl mb-12 italic uppercase text-center"><span class="highlight-blue">Оазис</span> в центре города</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="glass">
+                    <div class="text-4xl mb-4">🌊</div>
+                    <h4 class="font-black mb-2 uppercase italic text-sm">Стена-водопад</h4>
+                    <p class="text-[11px] text-zinc-500 italic leading-relaxed">Звуковой детокс, очистка воздуха и естественная прохлада.</p>
+                </div>
+                <div class="glass border-cyan-500/20">
+                    <div class="text-4xl mb-4">🐠</div>
+                    <h4 class="font-black mb-2 uppercase italic text-sm">Аквариумы</h4>
+                    <p class="text-[11px] text-zinc-500 italic leading-relaxed">Элементы зонирования и точка притяжения для гостей.</p>
+                </div>
+                <div class="glass">
+                    <div class="text-4xl mb-4">🌿</div>
+                    <h4 class="font-black mb-2 uppercase italic text-sm">Фито-дизайн</h4>
+                    <p class="text-[11px] text-zinc-500 italic leading-relaxed">Живые растения и натуральные материалы в отделке.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ПЕРЕРАБОТКА И ZERO WASTE (НОВОЕ) -->
+    <section class="bg-zinc-900/50">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <span class="text-green-500 font-bold text-[10px] tracking-widest uppercase mb-4 block italic">Zero Waste Economy</span>
+                <h2 class="unbounded text-4xl mb-8 italic uppercase italic">Pulled Chicken <br><span class="highlight-orange">Sandwiches</span></h2>
+                <div class="glass border-green-500/20">
+                    <p class="text-zinc-400 text-sm leading-relaxed italic mb-6">
+                        Мы не списываем продукт. Если курица не продана в течение "золотого часа", её мясо разбирается на волокна и используется для крафтовых сэндвичей. Это гарантирует **0% потерь мяса** и создает высокомаржинальный продукт для быстрого перекуса.
+                    </p>
+                    <div class="flex items-center gap-3 text-green-500">
+                        <span class="text-xl">♻️</span>
+                        <p class="text-[10px] font-bold uppercase tracking-widest">Переработка = Доп. Прибыль</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container order-1 lg:order-2">
+                <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&q=80" alt="" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. НАТУРАЛЬНЫЕ СОКИ (JUICE BAR) -->
+    <section class="bg-yellow-950/5">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="unbounded text-4xl mb-12 italic uppercase text-yellow-500">Natural Juice Bar</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="image-container h-80">
+                    <img src="https://avatars.mds.yandex.net/i?id=267a0fdca92e57460a02fe6bad93e78af33558df-6295814-images-thumbs&n=13" alt="" class="w-full h-full object-cover opacity-70">
+                </div>
+                <div class="text-left glass">
+                    <p class="text-zinc-300 italic mb-6 leading-relaxed">
+                        Свежевыжатые соки холодного отжима — это не только здоровье, но и высокая рентабельность. Мы предлагаем гостю идеальный баланс: сочная курица и освежающий сок.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-white/10 pb-2">
+                            <span class="text-xs uppercase text-zinc-500">Маржинальность</span>
+                            <span class="text-yellow-500 font-bold">до 600%</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/10 pb-2">
+                            <span class="text-xs uppercase text-zinc-500">Польза</span>
+                            <span class="text-yellow-500 font-bold">100% Витамины</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ЦЕННОСТИ (PAGE 6) -->
+    <section>
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="unbounded text-4xl mb-16 italic uppercase">Наши <span class="text-green-600 italic">Ценности</span></h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass text-left border-green-600/30">
+                    <h3 class="font-black text-xl mb-4 italic">100% Halal</h3>
+                    <p class="text-zinc-500 text-xs italic">Строгий контроль качества на всех этапах: от фермы до тарелки гостя.</p>
+                </div>
+                <div class="glass text-left border-zinc-700">
+                    <h3 class="font-black text-xl mb-4 italic">Семейный фокус</h3>
+                    <p class="text-zinc-500 text-xs italic">Безалкогольная среда, уютная атмосфера и игровая зона у аквариума.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. ФИНАНСЫ (PAGE 8-9) -->
+    <section class="bg-zinc-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="unbounded text-4xl mb-16 italic text-center uppercase">Экономика <span class="highlight-orange">Успеха</span></h2>
+            
+            <!-- Прогноз выручки -->
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <div class="glass text-center border-red-900/20">
+                    <p class="text-zinc-500 text-[10px] uppercase mb-2">Пессимистичный</p>
+                    <p class="text-3xl font-black">650К</p>
+                    <p class="text-[10px] text-zinc-600 mt-2 uppercase italic">сом / мес</p>
+                </div>
+                <div class="glass text-center border-orange-500/50 scale-105 bg-white/5">
+                    <p class="text-orange-500 text-[10px] uppercase mb-2">Реалистичный</p>
+                    <p class="text-4xl font-black italic">1.1M</p>
+                    <p class="text-[10px] text-zinc-600 mt-2 uppercase italic italic">сом / мес</p>
+                </div>
+                <div class="glass text-center border-green-900/20">
+                    <p class="text-zinc-500 text-[10px] uppercase mb-2">Оптимистичный</p>
+                    <p class="text-3xl font-black">1.5M</p>
+                    <p class="text-[10px] text-zinc-600 mt-2 uppercase italic">сом / мес</p>
+                </div>
+            </div>
+
+            <!-- Бюджет -->
+            <div class="glass">
+                <h3 class="unbounded text-2xl text-center mb-10 italic uppercase">Инвестиционный бюджет: <span class="highlight-orange">$25,000</span></h3>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="step-card">
+                        <h4 class="text-xl font-bold italic">$8,000</h4>
+                        <p class="text-[10px] text-zinc-500 uppercase">Оборудование</p>
+                    </div>
+                    <div class="step-card">
+                        <h4 class="text-xl font-bold italic">$9,500</h4>
+                        <p class="text-[10px] text-zinc-500 uppercase">Дизайн и Оазис</p>
+                    </div>
+                    <div class="step-card">
+                        <h4 class="text-xl font-bold italic">$4,500</h4>
+                        <p class="text-[10px] text-zinc-500 uppercase">Аренда и Маркетинг</p>
+                    </div>
+                    <div class="step-card">
+                        <h4 class="text-xl font-bold italic">$3,000</h4>
+                        <p class="text-[10px] text-zinc-500 uppercase">Оборотные средства</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. ДОРОЖНАЯ КАРТА (PAGE 11) -->
+    <section>
+        <div class="max-w-4xl mx-auto">
+            <h2 class="unbounded text-4xl mb-16 italic text-center uppercase">Дорожная <span class="highlight-orange">карта</span></h2>
+            <div class="space-y-12">
+                <div class="flex gap-8 items-start">
+                    <div class="w-12 h-12 rounded-full border border-orange-500 flex items-center justify-center font-bold text-orange-500">01</div>
+                    <div>
+                        <h4 class="font-bold uppercase italic text-lg mb-2">Подготовка (Месяц 1)</h4>
+                        <p class="text-zinc-500 text-sm italic">Поиск локации, заказ гриля (ротиссери), регистрация и договоры.</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 items-start">
+                    <div class="w-12 h-12 rounded-full border border-orange-500 flex items-center justify-center font-bold text-orange-500">02</div>
+                    <div>
+                        <h4 class="font-bold uppercase italic text-lg mb-2">Реализация (Месяц 2)</h4>
+                        <p class="text-zinc-500 text-sm italic">Ремонтные работы, монтаж водопада и аквариумов, найм персонала.</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 items-start">
+                    <div class="w-12 h-12 rounded-full border border-orange-500 flex items-center justify-center font-bold text-orange-500">03</div>
+                    <div>
+                        <h4 class="font-bold uppercase italic text-lg mb-2">Запуск (Месяц 3)</h4>
+                        <p class="text-zinc-500 text-sm italic">Обучение, техническое открытие, запуск рекламной кампании.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. ФИНАЛЬНЫЙ ЭКРАН -->
+    <section class="text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="unbounded text-5xl md:text-7xl font-black italic mb-12 uppercase italic">Let's Create <span class="highlight-orange">The Oasis</span></h2>
+            <p class="text-zinc-500 mb-20 tracking-[0.8em] text-xs uppercase italic">Бишкек • Кыргызстан • 2026</p>
+            <div class="w-px h-24 bg-gradient-to-t from-orange-600 to-transparent mx-auto mb-8"></div>
+            <p class="text-xs text-zinc-800 uppercase tracking-widest italic">Rotisery Concept • Confidential Investment Deck</p>
+        </div>
+    </section>
+
+</body>
+</html>
